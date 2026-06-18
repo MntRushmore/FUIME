@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FUIME — Mira Vale</title>
-  <meta name="description" content="FUIME — the debut album by Mira Vale. Six tracks of warm, cinematic indie folk." />
+  <title>Northern Light — Samyra, Anaya, Avani, Charlotte, and Sidd</title>
+  <meta name="description" content="Northern Light — the debut album by Samyra, Anaya, Avani, Charlotte, and Sidd. Six tracks of warm, cinematic indie folk." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
     <div class="topbar__inner">
       <a class="brand" href="#top">
         <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__name">Mira&nbsp;Vale</span>
+        <span class="brand__name">Samyra, Anaya, Avani, Charlotte, and Sidd</span>
       </a>
       <nav class="topbar__nav">
         <a href="#tracks">Tracks</a>
@@ -30,14 +30,14 @@
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="hero__art">
-        <img id="albumCover" src="covers/fuimealbum.jpg" alt="FUIME album cover" />
+        <img id="albumCover" src="assets/cover.svg" alt="Northern Light album cover" />
         <span class="hero__badge">6 tracks</span>
       </div>
 
       <div class="hero__meta">
         <p class="hero__eyebrow">Debut Album</p>
-        <h1 class="hero__title">FUIME</h1>
-        <p class="hero__artist">Mira Vale</p>
+        <h1 class="hero__title">Northern Light</h1>
+        <p class="hero__artist">Samyra, Anaya, Avani, Charlotte, and Sidd</p>
         <p class="hero__desc">
           A quiet, cinematic record about distance and return — recorded over one
           long winter in a cabin north of the tree line. Warm guitars, soft synths,
@@ -59,193 +59,3 @@
             <span class="btn__label">Play album</span>
           </button>
           <button class="btn btn--ghost" id="heroShuffle" type="button">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.83 13.41 13.42 14.82l1.59 1.59L13 18h5v-5l-1.61 1.61zM14.83 7.59 13.42 6.18l1.59-1.59L13 3h5v5l-1.61-1.61zM4 16h3.59L13 10.59 11.59 9.18 6 14.77V12H4z M4 8h3.59l.41.41 1.41-1.41L8 5.59 6 7.59V8z"/></svg>
-            <span>Shuffle</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Album details / song cards (merged from provided layout) ===== -->
-    <section class="section album-merge" id="album-overview">
-      <div class="album-details">
-        <h2>About the album</h2>
-        <p><strong>Album:</strong> Northern Light</p>
-        <p><strong>Artist:</strong> Mira Vale</p>
-        <p><strong>Released:</strong> 2026</p>
-        <p>
-          A quiet, cinematic record about distance and return — each song carrying
-          its own mood, image, and memory.
-        </p>
-      </div>
-
-      <div class="song-list">
-        <div class="song" data-title="First Snow" data-audio="audio/01-first-snow.wav">
-          <img src="covers/fuimealbum.jpg" alt="First Snow cover" />
-          <div class="song-info">
-            <h3>1. First Snow</h3>
-            <p>Click to play</p>
-          </div>
-        </div>
-
-        <div class="song" data-title="Cabin North" data-audio="audio/02-cabin-north.wav">
-          <img src="covers/skullsongcover.jpg" alt="Cabin North cover" />
-          <div class="song-info">
-            <h3>2. Cabin North</h3>
-            <p>Click to play</p>
-          </div>
-        </div>
-
-        <div class="song" data-title="Letters Home" data-audio="audio/03-letters-home.wav">
-          <img src="covers/rosesongcover.jpg" alt="Letters Home cover" />
-          <div class="song-info">
-            <h3>3. Letters Home</h3>
-            <p>Click to play</p>
-          </div>
-        </div>
-
-        <div class="song" data-title="Aurora" data-audio="audio/04-aurora.wav">
-          <img src="covers/swordsongcover.jpg" alt="Aurora cover" />
-          <div class="song-info">
-            <h3>4. Aurora</h3>
-            <p>Click to play</p>
-          </div>
-        </div>
-
-        <div class="song" data-title="The Long Way Back" data-audio="audio/05-the-long-way-back.wav">
-          <img src="covers/moonsongcover.jpg" alt="The Long Way Back cover" />
-          <div class="song-info">
-            <h3>5. The Long Way Back</h3>
-            <p>Click to play</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Track list ===== -->
-    <section class="section" id="tracks">
-      <div class="section__head">
-        <h2>Tracks</h2>
-        <p class="section__sub">Tap any song to start listening</p>
-      </div>
-
-      <ol class="tracklist" id="trackList" aria-label="Album tracks">
-        <!-- rows injected by JS -->
-      </ol>
-    </section>
-
-    <!-- ===== About / Notes ===== -->
-    <section class="section split" id="about">
-      <div class="split__col">
-        <div class="section__head">
-          <h2>About the album</h2>
-        </div>
-        <p class="prose">
-          <em>Northern Light</em> began as a set of voice memos recorded on a phone
-          left running by a frosted window. Over the months it became a full record —
-          spare arrangements built around fingerpicked guitar, brushed drums, and
-          analog synth pads that breathe like the cold air outside.
-        </p>
-        <p class="prose">
-          It's an album about leaving a place and the strange gravity that pulls you
-          back. Each track is a small room in the same house.
-        </p>
-        <div class="credits">
-          <div><span>Written &amp; produced by</span>Mira Vale</div>
-          <div><span>Mixed by</span>J. Aronsson</div>
-          <div><span>Recorded at</span>Cabin North</div>
-        </div>
-      </div>
-
-      <div class="split__col">
-        <div class="section__head">
-          <h2>Notes</h2>
-          <p class="section__sub" id="notesTitle">Now showing — first track</p>
-        </div>
-        <blockquote class="lyrics" id="lyrics">
-          Select a song to read its notes.
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- ===== Gallery ===== -->
-    <section class="section" id="gallery">
-      <div class="section__head">
-        <h2>Gallery</h2>
-        <p class="section__sub">Frames from the winter sessions</p>
-      </div>
-      <div class="gallery">
-        <figure class="gallery__item" data-tone="a"></figure>
-        <figure class="gallery__item" data-tone="b"></figure>
-        <figure class="gallery__item" data-tone="c"></figure>
-        <figure class="gallery__item" data-tone="d"></figure>
-      </div>
-    </section>
-
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-      <div class="footer__brand">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <div>
-          <strong>Northern Light</strong>
-          <span>Mira Vale · 2026</span>
-        </div>
-      </div>
-      <div class="footer__share">
-        <a href="#" aria-label="Share on X">X</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Spotify">Spotify</a>
-        <a href="#" aria-label="Copy link" id="copyLink">Copy link</a>
-      </div>
-    </footer>
-  </main>
-
-  <!-- ===== Sticky player ===== -->
-  <div class="player" id="player" aria-label="Audio player" data-empty="true">
-    <div class="player__inner">
-      <div class="player__now">
-        <img id="playerArt" src="assets/cover.svg" alt="" />
-        <div class="player__text">
-          <span class="player__title" id="playerTitle">Select a track</span>
-          <span class="player__artist" id="playerArtist">Mira Vale</span>
-        </div>
-      </div>
-
-      <div class="player__center">
-        <div class="player__controls">
-          <button class="iconbtn" id="prevBtn" type="button" aria-label="Previous">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
-          </button>
-          <button class="iconbtn iconbtn--main" id="playBtn" type="button" aria-label="Play">
-            <svg class="ic ic--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-            <svg class="ic ic--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>
-          </button>
-          <button class="iconbtn" id="nextBtn" type="button" aria-label="Next">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg>
-          </button>
-        </div>
-        <div class="player__progress">
-          <span class="time" id="curTime">0:00</span>
-          <div class="scrub" id="scrub" role="slider" aria-label="Seek" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <div class="scrub__track"><div class="scrub__fill" id="scrubFill"></div><span class="scrub__knob" id="scrubKnob"></span></div>
-          </div>
-          <span class="time" id="durTime">0:00</span>
-        </div>
-      </div>
-
-      <div class="player__right">
-        <button class="iconbtn" id="muteBtn" type="button" aria-label="Mute">
-          <svg class="ic ic--vol" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.06A7 7 0 0 1 14 18.7v2.06A9 9 0 0 0 14 3.2z"/></svg>
-          <svg class="ic ic--muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10zm15.5 2 2.3-2.3-1.4-1.4-2.3 2.3-2.3-2.3-1.4 1.4 2.3 2.3-2.3 2.3 1.4 1.4 2.3-2.3 2.3 2.3 1.4-1.4z"/></svg>
-        </button>
-        <div class="volume" id="volume" role="slider" aria-label="Volume" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
-          <div class="volume__track"><div class="volume__fill" id="volFill"></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <audio id="audio" preload="metadata"></audio>
-  <script src="script.js"></script>
-</body>
-</html>
