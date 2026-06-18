@@ -11,11 +11,11 @@ const TRACKS = [
   {
     title: "FUIME",
     src: "audio/01-first-snow.wav",
-    notes: "The opener. A song about someone who used tot feel unsure or quiet, but slowly finds their confidence. The “fumes” represent mystery, fear, doubt, or confusion, but instead of getting lost, the singer rises through it and finds their own magic.”",
+    notes: "The opener. A song about someone who used tot feel unsure or quiet, but slowly finds their confidence. The "fumes" represent mystery, fear, doubt, or confusion, but instead of gett[...]",
   },
   {
     title: "2:00 PM thoughts",
-    src: "audio/02-cabin-north.wav",
+    src: "https://app.budailabs.org/api/assets/640/media",
     notes: "A steadfast song about thoughts that come at 2:00 PM — the time when the world feels both quiet and full of possibilities. The thoughts are a mix of introspection and hope.",
   },
   {
@@ -31,7 +31,7 @@ const TRACKS = [
   {
     title: "Candlelight",
     src: "audio/05-the-long-way-back.wav",
-    notes: "Feelings of loneliness and longing, but also the warmth of memories and the hope of reunion. The candlelight represents a small but persistent source of comfort and connection in the darkness throughout a dance",
+    notes: "Feelings of loneliness and longing, but also the warmth of memories and the hope of reunion. The candlelight represents a small but persistent source of comfort and connection in the d[...]",
   }
 ];
 
