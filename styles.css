@@ -94,6 +94,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 }
 .hero__art {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   align-self: start;
   width: 100%;
   max-width: 360px;
@@ -106,6 +109,13 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   box-shadow: var(--shadow-lg);
   transform: translateY(0);
   transition: transform .25s var(--ease);
+}
+.hero__song-list {
+  width: 100%;
+  max-width: 360px;
+}
+.hero__song-list .song {
+  padding: 12px;
 }
 .hero__badge {
   position: absolute;
