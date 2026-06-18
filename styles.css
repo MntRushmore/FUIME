@@ -89,7 +89,6 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
   gap: 56px;
-  /* align items to the top so image sits beside the title/text */
   align-items: start;
   padding: 72px 0 64px;
 }
