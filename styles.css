@@ -264,13 +264,16 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 /* ===== Merged album details / song cards ===== */
 .album-merge {
   display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
   gap: 24px;
+  align-items: start;
 }
 .album-details {
   background: var(--surface-2);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 24px;
+  width: 100%;
 }
 .album-details h2 {
   margin-bottom: 18px;
@@ -283,6 +286,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .song-list {
   display: grid;
   gap: 14px;
+  width: 100%;
+  max-width: 560px;
+  order: -1;
 }
 .song {
   display: flex;
