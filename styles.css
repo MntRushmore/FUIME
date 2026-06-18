@@ -98,6 +98,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   aspect-ratio: 1;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
+  /* move the album cover up slightly */
+  transform: translateY(-24px);
+  transition: transform .25s var(--ease);
 }
 .hero__badge {
   position: absolute;
