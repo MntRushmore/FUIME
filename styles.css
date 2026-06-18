@@ -87,7 +87,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 /* ===== Hero ===== */
 .hero {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: minmax(0, 1fr) 360px;
   gap: 56px;
   /* align items to the top so image sits beside the title/text */
   align-items: start;

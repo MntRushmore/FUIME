@@ -29,6 +29,37 @@
   <main id="top">
     <!-- ===== Hero ===== -->
     <section class="hero">
+      <div class="hero__meta">
+        <p class="hero__eyebrow">Debut Album</p>
+        <h1 class="hero__title">FUIME</h1>
+        <p class="hero__artist">Mira Vale</p>
+        <p class="hero__desc">
+          A quiet, cinematic record about distance and return — recorded over one
+          long winter in a cabin north of the tree line. Warm guitars, soft synths,
+          and a voice that feels like the room next door.
+        </p>
+
+        <ul class="hero__facts">
+          <li><span>Released</span>2026</li>
+          <li class="dot" aria-hidden="true"></li>
+          <li><span>Genre</span>Indie&nbsp;Folk</li>
+          <li class="dot" aria-hidden="true"></li>
+          <li><span>Runtime</span><span id="totalRuntime">—</span></li>
+        </ul>
+
+        <div class="hero__actions">
+          <button class="btn btn--primary" id="heroPlay" type="button">
+            <svg class="ic ic--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="ic ic--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>
+            <span class="btn__label">Play album</span>
+          </button>
+          <button class="btn btn--ghost" id="heroShuffle" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.83 13.41 13.42 14.82l1.59 1.59L13 18h5v-5l-1.61 1.61zM14.83 7.59 13.42 6.18l1.59-1.59L13 3h5v5l-1.61-1.61zM4 16h3.59L13 10.59 1[...]
+            <span>Shuffle</span>
+          </button>
+        </div>
+      </div>
+
       <div class="hero__art">
         <img id="albumCover" src="covers/fuimealbum.jpg" alt="FUIME album cover" />
         <span class="hero__badge">6 tracks</span>
@@ -81,37 +112,6 @@
               <p>Click to play</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="hero__meta">
-        <p class="hero__eyebrow">Debut Album</p>
-        <h1 class="hero__title">FUIME</h1>
-        <p class="hero__artist">Mira Vale</p>
-        <p class="hero__desc">
-          A quiet, cinematic record about distance and return — recorded over one
-          long winter in a cabin north of the tree line. Warm guitars, soft synths,
-          and a voice that feels like the room next door.
-        </p>
-
-        <ul class="hero__facts">
-          <li><span>Released</span>2026</li>
-          <li class="dot" aria-hidden="true"></li>
-          <li><span>Genre</span>Indie&nbsp;Folk</li>
-          <li class="dot" aria-hidden="true"></li>
-          <li><span>Runtime</span><span id="totalRuntime">—</span></li>
-        </ul>
-
-        <div class="hero__actions">
-          <button class="btn btn--primary" id="heroPlay" type="button">
-            <svg class="ic ic--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-            <svg class="ic ic--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>
-            <span class="btn__label">Play album</span>
-          </button>
-          <button class="btn btn--ghost" id="heroShuffle" type="button">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.83 13.41 13.42 14.82l1.59 1.59L13 18h5v-5l-1.61 1.61zM14.83 7.59 13.42 6.18l1.59-1.59L13 3h5v5l-1.61-1.61zM4 16h3.59L13 10.59 1[...]
-            <span>Shuffle</span>
-          </button>
         </div>
       </div>
     </section>
