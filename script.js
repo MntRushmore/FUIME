@@ -11,33 +11,28 @@ const TRACKS = [
   {
     title: "FUIME",
     src: "audio/01-first-snow.wav",
-    notes: "The opener. Written the morning the road closed in.\n\n“I watched the white come down /\nand decided to stay.”",
+    notes: "The opener. A song about someone who used tot feel unsure or quiet, but slowly finds their confidence. The “fumes” represent mystery, fear, doubt, or confusion, but instead of getting lost, the singer rises through it and finds their own magic.”",
   },
   {
     title: "2:00 PM thoughts",
     src: "audio/02-cabin-north.wav",
-    notes: "A walking-pace song about the place itself —\nthe stove, the window, the long blue evenings.",
+    notes: "A steadfast song about thoughts that come at 2:00 PM — the time when the world feels both quiet and full of possibilities. The thoughts are a mix of introspection and hope.",
   },
   {
-    title: "Letters Home",
+    title: "Fame",
     src: "audio/03-letters-home.wav",
-    notes: "“Everything I meant to say /\nI folded into the page.”\n\nThe most direct lyric on the record.",
+    notes: "About how fame is everything it can seem as, amazingly desired, but also something that can be very isolating.",
   },
   {
-    title: "Aurora",
+    title: "Darkness",
     src: "audio/04-aurora.wav",
-    notes: "Mostly instrumental. Synth pads recorded live,\none take, with the door open to the cold.",
+    notes: "Traverses the fear of the dark and the unknown, but finding the courage to face it.",
   },
   {
-    title: "The Long Way Back",
+    title: "Candlelight",
     src: "audio/05-the-long-way-back.wav",
-    notes: "The turn. About choosing the slower road home\nbecause you're not quite ready to arrive.",
-  },
-  {
-    title: "Northern Light",
-    src: "audio/06-northern-light.wav",
-    notes: "The title track and the close.\n\n“If you're still awake /\nlook up — that's me, on my way.”",
-  },
+    notes: "Feelings of loneliness and longing, but also the warmth of memories and the hope of reunion. The candlelight represents a small but persistent source of comfort and connection in the darkness throughout a dance",
+  }
 ];
 
 /* ---------- Element refs ---------- */
