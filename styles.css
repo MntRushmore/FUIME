@@ -97,6 +97,10 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-self: start;
+  width: 100%;
+  max-width: 360px;
+  justify-self: end;
 }
 .hero__art > img {
   width: 100%;
