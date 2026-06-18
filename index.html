@@ -32,55 +32,14 @@
       <div class="hero__art">
         <img id="albumCover" src="covers/fuimealbum.jpg" alt="FUIME album cover" />
         <span class="hero__badge">6 tracks</span>
-
-        <div class="song-list hero__song-list">
-          <div class="song" data-title="First Snow" data-audio="audio/01-first-snow.wav">
-            <img src="covers/fuimealbum.jpg" alt="First Snow cover" />
-            <div class="song-info">
-              <h3>1. First Snow</h3>
-              <p>Click to play</p>
-            </div>
+        <div class="hero__tracks" id="tracks">
+          <div class="section__head">
+            <h2>Tracks</h2>
+            <p class="section__sub">Tap any song to start listening</p>
           </div>
-
-          <div class="song" data-title="Cabin North" data-audio="audio/02-cabin-north.wav">
-            <img src="covers/skullsongcover.jpg" alt="Cabin North cover" />
-            <div class="song-info">
-              <h3>2. Cabin North</h3>
-              <p>Click to play</p>
-            </div>
-          </div>
-
-          <div class="song" data-title="Letters Home" data-audio="audio/03-letters-home.wav">
-            <img src="covers/rosesongcover.jpg" alt="Letters Home cover" />
-            <div class="song-info">
-              <h3>3. Letters Home</h3>
-              <p>Click to play</p>
-            </div>
-          </div>
-
-          <div class="song" data-title="Aurora" data-audio="audio/04-aurora.wav">
-            <img src="covers/swordsongcover.jpg" alt="Aurora cover" />
-            <div class="song-info">
-              <h3>4. Aurora</h3>
-              <p>Click to play</p>
-            </div>
-          </div>
-
-          <div class="song" data-title="The Long Way Back" data-audio="audio/05-the-long-way-back.wav">
-            <img src="covers/moonsongcover.jpg" alt="The Long Way Back cover" />
-            <div class="song-info">
-              <h3>5. The Long Way Back</h3>
-              <p>Click to play</p>
-            </div>
-          </div>
-
-          <div class="song" data-title="Northern Light" data-audio="audio/06-northern-light.wav">
-            <img src="covers/fuimealbum.jpg" alt="Northern Light cover" />
-            <div class="song-info">
-              <h3>6. Northern Light</h3>
-              <p>Click to play</p>
-            </div>
-          </div>
+          <ol class="tracklist" id="trackList" aria-label="Album tracks">
+            <!-- rows injected by JS -->
+          </ol>
         </div>
       </div>
 
@@ -88,9 +47,6 @@
         <p class="hero__eyebrow">Debut Album</p>
         <h1 class="hero__title">FUIME</h1>
         <p class="hero__artist">Emotionally Insecure Vipers</p>
-        <p class="hero__desc">
-          Five tracks of empowering, strengthening, inspiring, cinematic pop.
-        </p>
 
         <ul class="hero__facts">
           <li><span>Released</span>2026</li>
@@ -113,31 +69,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ===== Album details / song cards (merged from provided layout) ===== -->
-    <section class="section album-merge" id="album-overview">
-      <div class="album-details">
-        <h2>About the album</h2>
-        <p><strong>Album:</strong> FUIME</p>
-        <p><strong>Artist:</strong> Emotionally Insecure Vipers</p>
-        <p><strong>Released:</strong> 2026</p>
-        <p>
-          Five tracks of empowering, strengthening, inspiring, cinematic pop.
-        </p>
-      </div>
-    </section>
-    <!-- ===== Track list ===== -->
-    <section class="section" id="tracks">
-      <div class="section__head">
-        <h2>Tracks</h2>
-        <p class="section__sub">Tap any song to start listening</p>
-      </div>
-
-      <ol class="tracklist" id="trackList" aria-label="Album tracks">
-        <!-- rows injected by JS -->
-      </ol>
-    </section>
-
     <!-- ===== About / Notes ===== -->
     <section class="section split" id="about">
       <div class="split__col">
@@ -145,7 +76,24 @@
           <h2>About the album</h2>
         </div>
         <p class="prose">
-          Five tracks of empowering, strengthening, inspiring, cinematic pop.
+          We created a platform where people can listen to empowering music that
+          makes them feel confident, motivated, and understood. We built this
+          website because music is a big part of our lives, and it helps us express
+          our emotions, connect with others, and feel inspired.
+        </p>
+        <p class="prose">
+          Our platform is for anyone who enjoys pop music and wants to discover
+          songs that match their mood. Whether someone is feeling happy, stressed,
+          excited, or in need of a confidence boost, our website gives them a place
+          to find music that fits how they feel.
+        </p>
+        <p class="prose">
+          Our competitive advantage is that our website was created by kids, which
+          gives it a fresh and creative perspective. We understand what young
+          listeners enjoy, and we combine different genres of music to make the
+          experience more fun, inspiring, and unique. Our goal is to create a music
+          platform that helps people feel empowered while discovering new songs they
+          love.
         </p>
         <div class="credits">
           <div><span>Written &amp; produced by</span>Emotionally Insecure Vipers</div>

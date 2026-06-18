@@ -80,6 +80,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ===== Layout ===== */
 main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .section { padding: 64px 0; border-top: 1px solid var(--line); }
+#about { padding-top: 0; }
 .section__head { margin-bottom: 28px; }
 .section__head h2 { font-size: 26px; font-weight: 700; }
 .section__sub { margin: 6px 0 0; color: var(--ink-3); font-size: 14.5px; }
@@ -94,15 +95,10 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 }
 .hero__art {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-self: start;
-  width: 100%;
-  max-width: 360px;
-  justify-self: start;
+  display: grid;
+  gap: 24px;
 }
-.hero__art > img {
+.hero__art img {
   width: 100%;
   aspect-ratio: 1;
   border-radius: var(--radius-lg);
@@ -128,6 +124,12 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   box-shadow: var(--shadow-sm);
   letter-spacing: .01em;
 }
+.hero__tracks {
+  width: 100%;
+}
+.hero__tracks .section__head { margin-bottom: 16px; }
+.hero__tracks h2 { font-size: 22px; }
+.hero__tracks .section__sub { margin: 4px 0 0; }
 .hero__eyebrow {
   margin: 0 0 12px;
   font-size: 13px; font-weight: 600; letter-spacing: .08em;
@@ -180,7 +182,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .is-playing .ic--pause { display: inline; }
 
 /* ===== Track list ===== */
-.tracklist { list-style: none; margin: 0; padding: 0; }
+.tracklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .track {
   display: grid;
   grid-template-columns: 36px 1fr auto auto;
@@ -192,7 +198,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   transition: background .18s var(--ease);
   border: 1px solid transparent;
 }
-.track + .track { margin-top: 2px; }
+.track + .track { margin-top: 8px; }
 .track:hover { background: var(--surface-2); }
 .track__index {
   position: relative;
