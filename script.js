@@ -422,27 +422,6 @@ function bind() {
     selectTrack(i);
   });
 
-  document.querySelectorAll(".song").forEach((song) => {
-    song.addEventListener("click", () => {
-      const title = song.dataset.title || "";
-      const src = song.dataset.audio || "";
-      if (!title || !src) return;
-
-      document.querySelectorAll(".song").forEach((card) => card.classList.remove("active"));
-      song.classList.add("active");
-
-      playerEl.dataset.empty = "false";
-      playerTitle.textContent = title;
-      playerArtist.textContent = ARTIST;
-      notesTitleEl.textContent = `Now showing — ${title}`;
-      lyricsEl.textContent = `${title} is ready to play.`;
-
-      audio.src = src;
-      audio.load();
-      play();
-    });
-  });
-
   // real-audio events
   audio.addEventListener("timeupdate", () => {
     if (!useDemo) updateProgress(audio.currentTime, audio.duration);
