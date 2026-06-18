@@ -93,15 +93,26 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   align-items: start;
   padding: 72px 0 64px;
 }
-.hero__art { position: relative; }
-.hero__art img {
+.hero__art {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hero__art > img {
   width: 100%;
   aspect-ratio: 1;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  /* no visual pull — keep flow consistent so art sits level with text */
   transform: translateY(0);
   transition: transform .25s var(--ease);
+}
+.hero__song-list {
+  width: 100%;
+  max-width: 360px;
+}
+.hero__song-list .song {
+  padding: 12px;
 }
 .hero__badge {
   position: absolute;
