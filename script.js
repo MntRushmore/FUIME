@@ -4,17 +4,17 @@
    the `src` paths below (or keep the generated demo tones).
    ============================================================ */
 
-const ARTIST = "Mira Vale";
+const ARTIST = "Emotionally Insecure Vipers";
 
 /* The album. Edit titles / durations / files / notes here. */
 const TRACKS = [
   {
-    title: "First Snow",
+    title: "FUIME",
     src: "audio/01-first-snow.wav",
     notes: "The opener. Written the morning the road closed in.\n\n“I watched the white come down /\nand decided to stay.”",
   },
   {
-    title: "Cabin North",
+    title: "2:00 PM thoughts",
     src: "audio/02-cabin-north.wav",
     notes: "A walking-pace song about the place itself —\nthe stove, the window, the long blue evenings.",
   },
@@ -420,6 +420,27 @@ function bind() {
   heroShuffle.addEventListener("click", () => {
     const i = Math.floor(Math.random() * TRACKS.length);
     selectTrack(i);
+  });
+
+  document.querySelectorAll(".song").forEach((song) => {
+    song.addEventListener("click", () => {
+      const title = song.dataset.title || "";
+      const src = song.dataset.audio || "";
+      if (!title || !src) return;
+
+      document.querySelectorAll(".song").forEach((card) => card.classList.remove("active"));
+      song.classList.add("active");
+
+      playerEl.dataset.empty = "false";
+      playerTitle.textContent = title;
+      playerArtist.textContent = ARTIST;
+      notesTitleEl.textContent = `Now showing — ${title}`;
+      lyricsEl.textContent = `${title} is ready to play.`;
+
+      audio.src = src;
+      audio.load();
+      play();
+    });
   });
 
   // real-audio events

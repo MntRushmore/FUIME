@@ -257,6 +257,67 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   min-height: 220px;
 }
 
+/* ===== Merged album details / song cards ===== */
+.album-merge {
+  display: grid;
+  gap: 24px;
+}
+.album-details {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+.album-details h2 {
+  margin-bottom: 18px;
+  font-size: 26px;
+}
+.album-details p {
+  margin: 0 0 10px;
+  color: var(--ink-2);
+}
+.song-list {
+  display: grid;
+  gap: 14px;
+}
+.song {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  cursor: pointer;
+  transition: transform .18s var(--ease), border-color .18s var(--ease), background .18s var(--ease);
+}
+.song:hover {
+  transform: translateY(-1px);
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+.song.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.song img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex: none;
+}
+.song-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.song-info p {
+  margin: 0;
+  color: var(--ink-3);
+  font-size: 14px;
+}
+
 /* ===== Gallery ===== */
 .gallery {
   display: grid;
