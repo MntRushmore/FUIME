@@ -1,0 +1,24 @@
+{
+  "name": "fuime",
+  "version": "1.0.0",
+  "description": "A clean, white, modern microsite for one album with six playable tracks. Pure HTML / CSS / JS. No backend, no build step.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MntRushmore/FUIME.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MntRushmore/FUIME/issues"
+  },
+  "homepage": "https://github.com/MntRushmore/FUIME#readme",
+  "dependencies": {
+    "playwright": "^1.61.0"
+  }
+}
