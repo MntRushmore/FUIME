@@ -20,7 +20,7 @@ const TRACKS = [
   },
   {
     title: "Fame",
-    src: "audio/media (4).mp3",
+    src: "audio/media-4.mp3",
     notes: "About how fame is everything it can seem as, amazingly desired, but also something that can be very isolating.",
   },
   {
@@ -30,7 +30,7 @@ const TRACKS = [
   },
   {
     title: "Candlelight",
-    src: "audio/05-the-long-way-back.wav",
+    src: "audio/media-3.mp3",
     notes: "Feelings of loneliness and longing, but also the warmth of memories and the hope of reunion. The candlelight represents a small but persistent source of comfort and connection in the d[...]"
   }
 ];
@@ -189,34 +189,19 @@ const DemoAudio = (() => {
    ============================================================ */
 let useDemo = false;
 
+function normalizeSrc(src) {
+  try {
+    return new URL(src, location.href).href;
+  } catch (e) {
+    return encodeURI(src);
+  }
+}
+
 function probeSources() {
-  // Probe all track sources; use real audio if any valid source loads.
-  let settled = false;
-  let checked = 0;
-
-  const decide = (demo) => {
-    if (settled) return;
-    settled = true;
-    useDemo = demo;
-    finishInit();
-  };
-
-  TRACKS.forEach((track) => {
-    const probe = new Audio();
-    probe.preload = "metadata";
-    probe.addEventListener("loadedmetadata", () => decide(false));
-    probe.addEventListener("error", () => {
-      checked += 1;
-      if (checked === TRACKS.length) decide(true);
-    });
-    probe.src = track.src;
-    probe.load();
-  });
-
-  // safety timeout — if none of the probes settled after a short time, prefer real audio
-  setTimeout(() => {
-    if (!settled) decide(checked === TRACKS.length);
-  }, 3000);
+  // Probe is disabled in this build. We prefer attempting actual audio directly,
+  // and only fall back to demo on a per-track error.
+  useDemo = false;
+  finishInit();
 }
 
 /* ---------- Build track rows ---------- */
@@ -262,7 +247,7 @@ function loadDurations() {
     } else {
       const a = new Audio();
       a.preload = "metadata";
-      a.src = t.src;
+      a.src = normalizeSrc(t.src);
       a.addEventListener("loadedmetadata", () => {
         durations[i] = a.duration;
         paintDuration(i);
@@ -300,7 +285,9 @@ function selectTrack(i) {
   if (useDemo) {
     durTimeEl.textContent = fmt(DemoAudio.duration(i));
   } else {
-    audio.src = t.src;
+    const src = normalizeSrc(t.src);
+    console.debug("Selecting track", t.title, src);
+    audio.src = src;
     audio.load();
   }
   play();
@@ -462,6 +449,7 @@ function bind() {
   audio.addEventListener("play", () => { isPlaying = true; reflectPlayingState(); });
   audio.addEventListener("pause", () => { if (!useDemo) { isPlaying = false; reflectPlayingState(); } });
   audio.addEventListener("error", () => {
+    console.error("Audio playback failed", audio.src, audio.error);
     if (!useDemo && current !== -1) {
       useDemo = true;
       DemoAudio.play(current);
@@ -537,4 +525,4 @@ function finishInit() {
 
 render();
 bind();
-probeSources();
+finishInit();
