@@ -38,14 +38,7 @@ body {
 }
 
 body.album-cover-clicked {
-  background:
-    linear-gradient(
-      135deg,
-      #000000 0%,
-      #24101f 46%,
-      #ff3ea7 100%
-    );
-  color: #fff;
+  background: #d1d5db;
 }
 
 h1, h2, h3 { margin: 0; letter-spacing: -.02em; }
