@@ -36,6 +36,10 @@ body {
   line-height: 1.5;
 }
 
+body.album-cover-clicked {
+  background: #6b7280;
+}
+
 h1, h2, h3 { margin: 0; letter-spacing: -.02em; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }

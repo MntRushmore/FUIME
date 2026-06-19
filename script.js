@@ -49,6 +49,7 @@ const heroShuffle = document.getElementById("heroShuffle");
 const playerTitle = document.getElementById("playerTitle");
 const playerArtist = document.getElementById("playerArtist");
 const playerArt = document.getElementById("playerArt");
+const albumCover = document.getElementById("albumCover");
 
 const scrub = document.getElementById("scrub");
 const scrubFill = document.getElementById("scrubFill");
@@ -431,6 +432,9 @@ function bind() {
   heroShuffle.addEventListener("click", () => {
     const i = Math.floor(Math.random() * TRACKS.length);
     selectTrack(i);
+  });
+  albumCover?.addEventListener("click", () => {
+    document.body.classList.toggle("album-cover-clicked");
   });
 
   // real-audio events
