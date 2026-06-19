@@ -189,10 +189,10 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 }
 .track {
   display: grid;
-  grid-template-columns: 36px 1fr auto auto;
+  grid-template-columns: 36px 8px 44px 1fr auto auto;
   align-items: center;
-  gap: 18px;
-  padding: 14px 16px;
+  gap: 12px;
+  padding: 12px 14px;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background .18s var(--ease);
@@ -221,6 +221,19 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
 .track__title { font-size: 15.5px; font-weight: 600; color: var(--ink); }
 .track__sub { font-size: 13px; color: var(--ink-3); margin-top: 2px; }
+.track__art {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+  flex: none;
+}
+
+.track__gap {
+  width: 8px;
+  height: 1px;
+}
 .track__dur {
   font-size: 14px; color: var(--ink-3);
   font-variant-numeric: tabular-nums;
@@ -284,7 +297,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 /* ===== Gallery ===== */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 .gallery__item {
@@ -300,6 +313,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .gallery__item[data-tone="b"] { background: #f1f6f9; }
 .gallery__item[data-tone="c"] { background: #f7f3ee; }
 .gallery__item[data-tone="d"] { background: #f3f5f1; }
+.gallery__item[data-tone="e"] { background: #eef6ff; }
 
 /* ===== Footer ===== */
 .footer {
@@ -448,7 +462,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   main { padding: 0 18px; }
   .topbar__nav { display: none; }
   .section { padding: 48px 0; }
-  .track { grid-template-columns: 28px 1fr auto; gap: 12px; padding: 12px; }
+  .track { grid-template-columns: 28px 6px 36px 1fr auto; gap: 12px; padding: 12px; }
   .track__btn { display: none; }
   .player { bottom: 0; left: 0; transform: none; width: 100%; border-radius: 20px 20px 0 0; height: 76px; }
   .player__inner { grid-template-columns: 1fr auto; gap: 12px; padding: 0 14px; }
@@ -457,6 +471,10 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
   .player__now img { width: 46px; height: 46px; }
   body { padding-bottom: 92px; }
   .hero__facts { gap: 12px; }
+}
+
+@media (max-width: 480px) {
+  .track__art { width: 36px; height: 36px; border-radius: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

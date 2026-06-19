@@ -208,17 +208,24 @@ function probeSources() {
 
 /* ---------- Build track rows ---------- */
 function render() {
+  // gather small cover thumbnails from the static .song list (if present)
+  const songEls = document.querySelectorAll('.song');
+  const covers = Array.from(songEls).map(s => s.querySelector('img')?.src || 'assets/cover.svg');
+
   const frag = document.createDocumentFragment();
   TRACKS.forEach((t, i) => {
     const li = document.createElement("li");
     li.className = "track";
     li.dataset.index = i;
+    const coverSrc = covers[i] || 'assets/cover.svg';
     li.innerHTML = `
       <div class="track__index">
         <span class="track__num">${i + 1}</span>
         <span class="track__playicon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
         <span class="track__eq" aria-hidden="true"><span></span><span></span><span></span></span>
       </div>
+      <div class="track__gap" aria-hidden="true"></div>
+      <img class="track__art" src="${coverSrc}" alt="${t.title} cover" />
       <div class="track__main">
         <div class="track__title">${t.title}</div>
         <div class="track__sub">${ARTIST}</div>
