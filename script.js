@@ -11,7 +11,7 @@ const TRACKS = [
   {
     title: "FUIME",
     src: "audio/01-first-snow.wav",
-    notes: "The opener. A song about someone who used to feel unsure or quiet, but slowly finds their confidence. The \"FUME\" represent mystery, fear, doubt, or confusion, but instead of getting [...]"
+    notes: "The opener. A song about someone who used to feel unsure or quiet, but slowly finds their confidence. The \"FUME\" represent mystery, fear, doubt, or confusion, but instead of getting overwhelmed by it, the person learns to embrace it as part of who they are."
   },
   {
     title: "2:00 PM thoughts",
