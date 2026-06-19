@@ -15,7 +15,7 @@ const TRACKS = [
   },
   {
     title: "2:00 PM thoughts",
-    src: "https://app.budailabs.org/api/assets/640/media",
+    src: "audio/02-2pm-thoughts.mp3",
     notes: "A steadfast song about thoughts that come at 2:00 PM — the time when the world feels both quiet and full of possibilities. The thoughts are a mix of introspection and hope.",
   },
   {
@@ -189,19 +189,28 @@ const DemoAudio = (() => {
 let useDemo = false;
 
 function probeSources() {
-  // Quick HEAD-less probe: attempt to load metadata for track 0.
-  const probe = new Audio();
+  // Probe all track sources; use real audio if any valid source loads.
   let settled = false;
+  let checked = 0;
+
   const decide = (demo) => {
     if (settled) return;
     settled = true;
     useDemo = demo;
     finishInit();
   };
-  probe.addEventListener("loadedmetadata", () => decide(false));
-  probe.addEventListener("error", () => decide(true));
-  probe.preload = "metadata";
-  probe.src = TRACKS[0].src;
+
+  TRACKS.forEach((track) => {
+    const probe = new Audio();
+    probe.preload = "metadata";
+    probe.addEventListener("loadedmetadata", () => decide(false));
+    probe.addEventListener("error", () => {
+      checked += 1;
+      if (checked === TRACKS.length) decide(true);
+    });
+    probe.src = track.src;
+  });
+
   // safety timeout — if nothing fires, assume demo
   setTimeout(() => decide(useDemo), 1200);
 }
