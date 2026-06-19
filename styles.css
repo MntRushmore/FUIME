@@ -30,6 +30,7 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--bg);
+  transition: background .35s ease, color .35s ease;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   padding-bottom: calc(var(--player-h) + 28px);
@@ -37,7 +38,14 @@ body {
 }
 
 body.album-cover-clicked {
-  background: #d1d5db;
+  background:
+    linear-gradient(
+      135deg,
+      #000000 0%,
+      #24101f 46%,
+      #ff3ea7 100%
+    );
+  color: #fff;
 }
 
 h1, h2, h3 { margin: 0; letter-spacing: -.02em; }

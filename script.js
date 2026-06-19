@@ -425,6 +425,10 @@ function onDemoEnded() { if (useDemo) next(); }
    Wire events
    ============================================================ */
 function bind() {
+  const toggleBackgroundMode = () => {
+    document.body.classList.toggle("album-cover-clicked");
+  };
+
   playBtn.addEventListener("click", togglePlay);
   prevBtn.addEventListener("click", prev);
   nextBtn.addEventListener("click", next);
@@ -433,8 +437,15 @@ function bind() {
     const i = Math.floor(Math.random() * TRACKS.length);
     selectTrack(i);
   });
-  albumCover?.addEventListener("click", () => {
-    document.body.classList.toggle("album-cover-clicked");
+  albumCover?.addEventListener("click", toggleBackgroundMode);
+
+  const thoughtsTrack = [...trackListEl.querySelectorAll(".track")].find(
+    (row) => row.querySelector(".track__title")?.textContent.trim() === "2:00 PM thoughts"
+  );
+  const thoughtsArt = thoughtsTrack?.querySelector(".track__art");
+  thoughtsArt?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleBackgroundMode();
   });
 
   // real-audio events
