@@ -25,7 +25,7 @@ const TRACKS = [
   },
   {
     title: "Darkness",
-    src: "audio/04-aurora.wav",
+    src: "audio/media (6).mp3",
     notes: "Traverses the fear of the dark and the unknown, but finding the courage to face it.",
   },
   {
