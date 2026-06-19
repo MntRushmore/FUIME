@@ -35,6 +35,14 @@ const TRACKS = [
   }
 ];
 
+const TRACK_COVER_MAP = {
+  FUIME: "covers/Screen%20Shot%202026-06-18%20at%2011.43.11%20AM.png",
+  "2:00 PM thoughts": "covers/Screen%20Shot%202026-06-18%20at%2012.08.24%20PM.png",
+  Fame: "covers/rosesongcover.jpg",
+  Darkness: "covers/Screen%20Shot%202026-06-18%20at%2011.40.22%20AM.png",
+  Candlelight: "covers/Screen%20Shot%202026-06-18%20at%2011.39.55%20AM.png"
+};
+
 /* ---------- Element refs ---------- */
 const audio = document.getElementById("audio");
 const trackListEl = document.getElementById("trackList");
@@ -214,16 +222,16 @@ function probeSources() {
 
 /* ---------- Build track rows ---------- */
 function render() {
-  // gather small cover thumbnails from the static .song list (if present)
-  const songEls = document.querySelectorAll('.song');
-  const covers = Array.from(songEls).map(s => s.querySelector('img')?.src || 'assets/cover.svg');
+  const galleryImages = Array.from(
+    document.querySelectorAll('#gallery .gallery__item img')
+  ).map((img) => img.currentSrc || img.src || 'assets/cover.svg');
 
   const frag = document.createDocumentFragment();
   TRACKS.forEach((t, i) => {
     const li = document.createElement("li");
     li.className = "track";
     li.dataset.index = i;
-    const coverSrc = covers[i] || 'assets/cover.svg';
+    const coverSrc = TRACK_COVER_MAP[t.title] || galleryImages[i] || 'assets/cover.svg';
     li.innerHTML = `
       <div class="track__index">
         <span class="track__num">${i + 1}</span>
