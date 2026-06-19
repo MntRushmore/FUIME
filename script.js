@@ -36,11 +36,11 @@ const TRACKS = [
 ];
 
 const TRACK_COVER_MAP = {
-  FUIME: "covers/Screen%20Shot%202026-06-18%20at%2011.43.11%20AM.png",
-  "2:00 PM thoughts": "covers/Screen%20Shot%202026-06-18%20at%2012.08.24%20PM.png",
-  Fame: "covers/rosesongcover.jpg",
-  Darkness: "covers/Screen%20Shot%202026-06-18%20at%2011.40.22%20AM.png",
-  Candlelight: "covers/Screen%20Shot%202026-06-18%20at%2011.39.55%20AM.png"
+  Fame: "covers/Screen%20Shot%202026-06-18%20at%2011.39.55%20AM.png",
+  Candlelight: "covers/Screen%20Shot%202026-06-18%20at%2012.08.24%20PM.png",
+  FUIME: "covers/Screen%20Shot%202026-06-18%20at%2011.40.22%20AM.png",
+  "2:00 PM thoughts": "covers/Screen%20Shot%202026-06-18%20at%2011.43.11%20AM.png",
+  Darkness: "covers/rosesongcover.jpg"
 };
 
 /* ---------- Element refs ---------- */
