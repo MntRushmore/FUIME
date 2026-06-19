@@ -210,10 +210,13 @@ function probeSources() {
       if (checked === TRACKS.length) decide(true);
     });
     probe.src = track.src;
+    probe.load();
   });
 
-  // safety timeout — if nothing fires, assume demo
-  setTimeout(() => decide(useDemo), 1200);
+  // safety timeout — if none of the probes settled after a short time, prefer real audio
+  setTimeout(() => {
+    if (!settled) decide(checked === TRACKS.length);
+  }, 3000);
 }
 
 /* ---------- Build track rows ---------- */
@@ -458,6 +461,13 @@ function bind() {
   audio.addEventListener("ended", next);
   audio.addEventListener("play", () => { isPlaying = true; reflectPlayingState(); });
   audio.addEventListener("pause", () => { if (!useDemo) { isPlaying = false; reflectPlayingState(); } });
+  audio.addEventListener("error", () => {
+    if (!useDemo && current !== -1) {
+      useDemo = true;
+      DemoAudio.play(current);
+      reflectPlayingState();
+    }
+  });
 
   // scrubbing
   let scrubbing = false;
