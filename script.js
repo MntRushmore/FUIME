@@ -10,8 +10,8 @@ const ARTIST = "Emotionally Insecure Vipers";
 const TRACKS = [
   {
     title: "FUIME",
-    src: "audio/01-first-snow.wav",
-    notes: "The opener. A song about someone who used to feel unsure or quiet, but slowly finds their confidence. The \"FUME\" represent mystery, fear, doubt, or confusion, but instead of getting overwhelmed by it, the person learns to embrace it as part of who they are."
+    src: "audio/media (5).mp3",
+    notes: "The opener. A song about someone who used to feel unsure or quiet, but slowly finds their confidence. The \"FUME\" represent mystery, fear, doubt, or confusion, but instead of getting [...]"
   },
   {
     title: "2:00 PM thoughts",
@@ -287,8 +287,10 @@ function selectTrack(i) {
   } else {
     const src = normalizeSrc(t.src);
     console.debug("Selecting track", t.title, src);
+    audio.pause();
     audio.src = src;
     audio.load();
+    audio.currentTime = 0;
   }
   play();
   highlight();
@@ -300,7 +302,23 @@ function play() {
     DemoAudio.play(current, audio._demoSeek || 0);
     audio._demoSeek = 0;
   } else {
-    audio.play().catch(() => {});
+    const tryPlay = () => {
+      audio.play().catch(() => {
+        setTimeout(() => {
+          if (!useDemo && current !== -1 && audio.src) {
+            audio.play().catch(() => {});
+          }
+        }, 250);
+      });
+    };
+
+    if (audio.src && audio.readyState >= 2) {
+      tryPlay();
+    } else {
+      audio.addEventListener("loadeddata", tryPlay, { once: true });
+      audio.addEventListener("canplay", tryPlay, { once: true });
+      audio.addEventListener("canplaythrough", tryPlay, { once: true });
+    }
   }
   reflectPlayingState();
 }
