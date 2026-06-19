@@ -37,7 +37,7 @@ body {
 }
 
 body.album-cover-clicked {
-  background: #6b7280;
+  background: #d1d5db;
 }
 
 h1, h2, h3 { margin: 0; letter-spacing: -.02em; }
