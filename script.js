@@ -191,9 +191,17 @@ let useDemo = false;
 
 function normalizeSrc(src) {
   try {
-    return new URL(src, location.href).href;
+    const url = new URL(src, location.href);
+    url.pathname = url.pathname
+      .split('/')
+      .map((segment) => encodeURIComponent(decodeURIComponent(segment)))
+      .join('/');
+    return url.href;
   } catch (e) {
-    return encodeURI(src);
+    return src
+      .split('/')
+      .map((segment) => encodeURIComponent(decodeURIComponent(segment)))
+      .join('/');
   }
 }
 
